@@ -1524,7 +1524,9 @@ li {
   .lk-interes__content-title {
     font-size: 22px; }
   .lk-interes__content-text {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .sidebar.open {
+    width: 100%; } }
 
 @media (max-width: 465px) {
   .support__top-info {
