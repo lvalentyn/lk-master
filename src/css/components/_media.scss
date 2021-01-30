@@ -243,7 +243,9 @@ body.lock {
   .lk-content__wrapper {
     padding: 20px;
   }
-
+  .sidebar {
+ min-width: auto; 
+}
 }
 
 @media (max-width: 790px) {

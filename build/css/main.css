@@ -1468,7 +1468,9 @@ li {
   .lk-interes__account {
     margin-right: 0px; }
   .lk-content__wrapper {
-    padding: 20px; } }
+    padding: 20px; }
+  .sidebar {
+    min-width: auto; } }
 
 @media (max-width: 790px) {
   .lk-banner__item {
