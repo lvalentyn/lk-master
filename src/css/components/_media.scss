@@ -102,6 +102,9 @@
 //     position: relative;
 //     z-index: 555;
 //   }
+.page-wrapper {
+	overflow: hidden;
+}
   .lk-source__item {
     display: block;
     max-width: 100%;

@@ -1347,6 +1347,8 @@ li {
     width: 135px; } }
 
 @media (max-width: 1300px) {
+  .page-wrapper {
+    overflow: hidden; }
   .lk-source__item {
     display: block;
     max-width: 100%;
