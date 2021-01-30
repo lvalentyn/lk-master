@@ -67,39 +67,39 @@ $(function () {
 });
 
 /* Локализация datepicker */
-$.datepicker.regional['ru'] = {
-    closeText: 'Закрыть',
-    prevText: 'Предыдущий',
-    nextText: 'Следующий',
-    currentText: 'Сегодня',
-    monthNames: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
-    monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-    dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
-    dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
-    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-    weekHeader: 'Не',
-    dateFormat: 'd MM',
-    firstDay: 1,
-    isRTL: false,
-    showMonthAfterYear: false,
-    yearSuffix: ''
-};
-$.datepicker.setDefaults($.datepicker.regional['ru']);
+// $.datepicker.regional['ru'] = {
+//     closeText: 'Закрыть',
+//     prevText: 'Предыдущий',
+//     nextText: 'Следующий',
+//     currentText: 'Сегодня',
+//     monthNames: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
+//     monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+//     dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+//     dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+//     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+//     weekHeader: 'Не',
+//     dateFormat: 'd MM',
+//     firstDay: 1,
+//     isRTL: false,
+//     showMonthAfterYear: false,
+//     yearSuffix: ''
+// };
+// $.datepicker.setDefaults($.datepicker.regional['ru']);
 
-$(function () {
-    $('.datepicker').datepicker({
-        showOn: "button",
-        range: 'period', // режим - выбор периода
-        numberOfMonths: 2,
-        buttonImageOnly: true,
-        buttonImage: "../img/icons/calendar-icon.svg",
+// $(function () {
+//     $('.datepicker').datepicker({
+//         showOn: "button",
+//         range: 'period', // режим - выбор периода
+//         numberOfMonths: 2,
+//         buttonImageOnly: true,
+//         buttonImage: "../img/icons/calendar-icon.svg",
 
-        onSelect: function (dateText, inst, extensionRange) {
-            // extensionRange - объект расширения
-            $('.date-start').html(extensionRange.startDateText);
-            $('.date-end').html(extensionRange.endDateText);
-            console.log(extensionRange);
-        }
-    });
+//         onSelect: function (dateText, inst, extensionRange) {
+//             // extensionRange - объект расширения
+//             $('.date-start').html(extensionRange.startDateText);
+//             $('.date-end').html(extensionRange.endDateText);
+//             console.log(extensionRange);
+//         }
+//     });
 
-});
+// });
