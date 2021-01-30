@@ -496,52 +496,44 @@ li {
         line-height: 19px;
         cursor: pointer;
         transition: all .3s;
-        &>input {
-            position: absolute;
-            z-index: -1;
-            opacity: 0;
+        .lk-content__filter-input {
+            display: none;
         }
-        &>div {
-            display: inline-flex;
-            align-items: center;
-            user-select: none;
+        .lk-content__filter-input:checked + span::before {
+            opacity: 1;
+        }
+        span { 
+            display: inline-block;
+            transition: all .3s;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #8A0502;
+            border-radius: 50%;
+            position: relative;
             &::before {
-                content: '';
-                display: inline-block;
-                width: 1em;
-                height: 1em;
-                flex-shrink: 0;
-                flex-grow: 0;
-                border: 1px solid #adb5bd;
-                border-radius: 0.25em;
-                margin-right: 0.5em;
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: 50% 50%;
+                content:'';
+                position: absolute;
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: #8A0502;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                opacity: 0;
+                transition: all .3s;
             }
         }
-        &>input:not(:disabled):not(:checked)+span:hover::before {
-            border-color: #000;
+        .lk-content__filter-input:checked + span::before {
+            opacity: 1;
         }
-        &>input:disabled+span::before {
-            background-color: #e9ecef;
-          }
     }
-    &__filter-input {
-        margin: 0;
-        transition: all .3s;
-        width: 20px;
-        height: 20px;
-    }
-    
-   
-
     &__filter-input-text {
         margin-left: 10px;
     }
 
 }
-
 
 
 
