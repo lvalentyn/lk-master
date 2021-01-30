@@ -388,8 +388,10 @@ li {
     
 
     &__top {
-        max-height: 80px;
+        // max-height: 80px;
         position: relative;
+        display: flex;
+        justify-content: space-between;
         box-shadow: 0px 2px 2px rgba(162, 163, 165, 0.2);
         @extend %gilroy-sm;
         font-size: 18px;
@@ -399,6 +401,7 @@ li {
     &__top-inner {
         display: flex;
         align-items: center;
+        width: 100%;
     }
 
     &__top-balance {
@@ -421,6 +424,7 @@ li {
         color: #616781;
         transition: all .3s;
         padding: 32px 40px 27px;
+        border-bottom: 2px solid transparent;
     }
 
     &__text.active {
@@ -492,14 +496,45 @@ li {
         line-height: 19px;
         cursor: pointer;
         transition: all .3s;
+        &>input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+        &>div {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                flex-shrink: 0;
+                flex-grow: 0;
+                border: 1px solid #adb5bd;
+                border-radius: 0.25em;
+                margin-right: 0.5em;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 50% 50%;
+            }
+        }
+        &>input:not(:disabled):not(:checked)+span:hover::before {
+            border-color: #000;
+        }
+        &>input:disabled+span::before {
+            background-color: #e9ecef;
+          }
     }
-
     &__filter-input {
         margin: 0;
         transition: all .3s;
         width: 20px;
         height: 20px;
     }
+    
+   
 
     &__filter-input-text {
         margin-left: 10px;
@@ -682,16 +717,16 @@ li {
     &__inner {
         border: 2px solid rgba(97, 103, 129, 0.07);
         border-radius: 5px;
-        max-width: 760px;
-
-
+        width: 100%;
+        overflow: auto;
     }
-
     &__table {
         display: flex;
         align-items: center;
+        width: 100%;
+    min-width: 800px;
+    overflow: auto;
     }
-
     &__item {
         width: 175px;
         @extend %gilroy-sm;
@@ -1246,9 +1281,19 @@ li {
     &__request {
         margin-top: 40px;
     }
-
+    .lk-history__table  {
+        width: 100%;
+        overflow: visible;
+        height: 100%;
+      
+    }
+    .lk-history__item {
+        font-size: 14px;
+        line-height: 12px;
+    }
     &__request-inner {
-        max-width: 1086px;
+        overflow: auto;
+        max-width: 100%;
     }
 
     &__request-one {
@@ -1263,9 +1308,9 @@ li {
         max-width: 477px;
     }
 
-    &__request-four {
-        max-width: 201px;
-    }
+    // &__request-four {
+    //     max-width: 201px;
+    // }
 
     &__request-tems {
         display: flex;
@@ -1306,7 +1351,7 @@ li {
         @extend %gilroy-m;
         font-size: 12px;
         line-height: 14px;
-
+overflow: visible;
         color: #FFFFFF;
     }
 
